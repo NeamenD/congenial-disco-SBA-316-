@@ -17,3 +17,40 @@ Array.from(deleteBtns).forEach(function (btn) {
     li.parentNode.removeChild(li);
   });
 });
+
+// add element
+
+var addBtn = document.getElementById("btns");
+
+addBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  const newLi = document.createElement("li");
+  const movieName = document.getElementById("fevoriteMovieNameInput").value;
+
+  //name span created
+  const nameSpan = document.createElement("span");
+  nameSpan.classList.add("name");
+  nameSpan.textContent = movieName;
+  newLi.appendChild(nameSpan);
+
+  //viewd span created
+
+  const viewedSpan = document.createElement("span");
+  viewedSpan.classList.add("viewed");
+  viewedSpan.textContent = "Viewed";
+  newLi.appendChild(viewedSpan);
+
+  //   delete buton created
+
+  const deleteSpan = document.createElement("span");
+  deleteSpan.classList.add("delete");
+  deleteSpan.textContent = "Delete";
+  newLi.appendChild(deleteSpan);
+
+  // Append the new list item to the list
+
+  const movieList = document
+    .getElementById("movie-list")
+    .getElementsByTagName("ul")[0];
+  movieList.appendChild(newLi);
+});
