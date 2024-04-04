@@ -27,6 +27,16 @@ addBtn.addEventListener("click", function (e) {
   const newLi = document.createElement("li");
   const movieName = document.getElementById("fevoriteMovieNameInput").value;
 
+  //   some validation
+
+  if (movieName.trim() === "") {
+    document.getElementById("errorMessage").textContent =
+      "Movie name can not be empty";
+    return;
+  } else {
+    document.getElementById("errorMessage").textContent = "";
+  }
+
   //name span created
   const nameSpan = document.createElement("span");
   nameSpan.classList.add("name");

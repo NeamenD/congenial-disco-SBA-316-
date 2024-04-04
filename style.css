@@ -153,5 +153,9 @@ input{
   }
   
   input:invalid {
-    border: 2px solid red;
+    border: 2px solid rgb(255, 0, 0);
+  }
+
+  #errorMessage{
+    color: red;
   }
