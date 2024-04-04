@@ -95,12 +95,13 @@ input{
 .viewed {
   display: inline-block;
   padding: 8px 16px;
-  margin: 4px;
+  margin: 10px;
   background-color: #007bff; 
   color: #fff; 
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 /* delete */
@@ -108,7 +109,7 @@ input{
 .delete {
     display: inline-block;
     padding: 8px 16px;
-    margin: 4px;
+    margin: 10px;
     background-color: #b11018; 
     color: #fff; 
     border: none;
@@ -132,7 +133,25 @@ input{
   }
   
 
-.name {
+/* .name {
     margin: 20px;
     padding: 20px;
+    margin-right: 25px;
+  } */
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .name {
+    flex-grow: 1; /* Allow the name span to grow and fill available space */
+  }
+  
+  .viewed, .delete {
+    margin-left: 10px; /* Add margin between the spans */
+  }
+  
+  input:invalid {
+    border: 2px solid red;
   }
