@@ -53,4 +53,17 @@ addBtn.addEventListener("click", function (e) {
     .getElementById("movie-list")
     .getElementsByTagName("ul")[0];
   movieList.appendChild(newLi);
+
+  //   delet the new added element
+
+  deleteSpan.addEventListener("click", function (e) {
+    const li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+  });
+
+  //   strikethrough
+  viewedSpan.addEventListener("click", function (e) {
+    const li = e.target.parentElement;
+    li.classList.toggle("strikethrough");
+  });
 });

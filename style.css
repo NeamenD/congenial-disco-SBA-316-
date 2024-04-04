@@ -27,6 +27,7 @@ li{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     margin: 20px auto;
     border-radius: 6px;
+    max-width: 800px;
 }
 
 #Page-banner{
@@ -89,17 +90,14 @@ input{
   border: 2px solid #4285f4;
 }
 
-.delete{
-
-}
 
 /* Style */
 .viewed {
   display: inline-block;
   padding: 8px 16px;
   margin: 4px;
-  background-color: #007bff; /* Blue color, you can change it to any color you like */
-  color: #fff; /* Text color */
+  background-color: #007bff; 
+  color: #fff; 
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -120,12 +118,12 @@ input{
 
 
 .delete:hover {
-  background-color: #2d0554; /* Darker blue color on hover */
+  background-color: #2d0554; 
 }
 
-/* Style the span elements when clicked */
+
 .viewed:active {
-  background-color: #006666; /* Even darker blue color when clicked */
+  background-color: #006666; 
 }
 
 
@@ -134,3 +132,7 @@ input{
   }
   
 
+.name {
+    margin: 20px;
+    padding: 20px;
+  }
