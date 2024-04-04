@@ -25,7 +25,9 @@ var addBtn = document.getElementById("btns");
 addBtn.addEventListener("click", function (e) {
   e.preventDefault();
   const newLi = document.createElement("li");
-  const movieName = document.getElementById("fevoriteMovieNameInput").value;
+  const movieName = document
+    .getElementById("fevoriteMovieNameInput")
+    .value.trim();
 
   //   some validation
 
@@ -62,8 +64,19 @@ addBtn.addEventListener("click", function (e) {
   const movieList = document
     .getElementById("movie-list")
     .getElementsByTagName("ul")[0];
-  movieList.appendChild(newLi);
 
+  const existingMovies = movieList.getElementsByClassName("name");
+
+  for (let i = 0; i < existingMovies.length; i++) {
+    if (existingMovies[i].textContent.trim() === movieName) {
+      document.getElementById("errorMessage").textContent =
+        "Movie already in the list";
+      return; //stop execution if the movie is already in the list
+    }
+  }
+  document.getElementById("errorMessage").textContent = "";
+
+  movieList.appendChild(newLi); //append it after doing some validation
   //   delet the new added element
 
   deleteSpan.addEventListener("click", function (e) {
