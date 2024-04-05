@@ -66,7 +66,7 @@ addBtn.addEventListener("click", function (e) {
     .getElementsByTagName("ul")[0];
 
   const existingMovies = movieList.getElementsByClassName("name");
-
+  // console.log(existingMovies.length);
   for (let i = 0; i < existingMovies.length; i++) {
     if (existingMovies[i].textContent.trim() === movieName) {
       document.getElementById("errorMessage").textContent =
@@ -76,7 +76,7 @@ addBtn.addEventListener("click", function (e) {
   }
   document.getElementById("errorMessage").textContent = "";
 
-  movieList.appendChild(newLi); //append it after doing some validation
+  movieList.appendChild(newLi); //append it after doing
   //   delet the new added element
 
   deleteSpan.addEventListener("click", function (e) {
